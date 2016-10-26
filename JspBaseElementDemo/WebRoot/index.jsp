@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="US-ASCII"%>
+<%@ page language="java" import="java.util.*" contentType="text/html; charset=utf-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -21,6 +21,27 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    This is my JSP page. <br>
+  	<h1>大家好</h1>
+  	<!-- 我是HTML注释，在客户端可见 -->
+  	<%-- 我是JSP注释，在客户端不可见 --%>
+  	
+  	<%			//JSP脚本
+  		//单行注释
+  		/*多行注释*/
+  		out.println("欢迎学习JAVAEE开发");
+  	 %>
+  	 <%!		//声明脚本
+  	 	String s="张三";
+  	 	int add(int x,int y){
+  	 		return x+y;
+  	 	}
+  	  %>
+  	  <br>
+  	  你好，<%=		//表达式脚本
+  	  	s			//不以分号结尾
+  	   %>
+  	   <br>
+  	   x+y=<%=add(5,10) %>
+  	
   </body>
 </html>
