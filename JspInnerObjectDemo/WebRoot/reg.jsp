@@ -23,7 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
   	<h1>用户注册</h1>
   	<hr>
-  	<form name="regForm" action="request.jsp" method="post">
+  	<form name="regForm" action="response.jsp" method="post">
   		<table>
 			<tr>
 				<td>用户名：</td>
@@ -44,6 +44,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</tr>
   		</table>
   	</form>
+  	
+  	<br>
+  	<br>
+  	<a href="request.jsp?username=李四">测试URL传参数</a>
+  	
+  
+  	
   
   
   
